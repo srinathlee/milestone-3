@@ -41,10 +41,10 @@ const todoList = () => {
        for (let i of list){
         if (i.dueDate==today){
             if(i.completed==true){
-                str+=`[X] ${i.title}`
+                str+=`[X] ${i.title}\n`
             }
             else{
-                str+=`[ ] ${i.title}`
+                str+=`[ ] ${i.title}\n`
             }
         }
         else if(i.completed==true){
@@ -54,7 +54,7 @@ const todoList = () => {
          str+=`[ ] ${i.title} ${i.dueDate}\n`
         }
        }
-    return str;
+    return str.trim();
 
     }
   
