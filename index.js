@@ -8,11 +8,6 @@ const todoList = () => {
     }
   
     const overdue = () => {
-      // Write the date check condition here and return the array of overdue items accordingly.
-      // FILL YOUR CODE HERE
-      // ..
-      // ..
-      // ..
       let over_items=[];
       for(let i of all){
         if(i.dueDate==yesterday){
@@ -20,11 +15,8 @@ const todoList = () => {
         }
     }
     return over_items;
-}
-  
+   }
     const dueToday = () => {
-      // Write the date check condition here and return the array of todo items that are due today accordingly.
-      // FILL YOUR CODE HERE
       let due_items=[];
       for(let i of all){
        
@@ -36,8 +28,6 @@ const todoList = () => {
     }
   
     const dueLater = () => {
-      // Write the date check condition here and return the array of todo items that are due later accordingly.
-      // FILL YOUR CODE HERE
       let later_items=[];
       for(let i of all){
         if(i.dueDate==tomorrow){
@@ -46,23 +36,15 @@ const todoList = () => {
     }
     return later_items;
        }
-  
     const toDisplayableList = (list) => {
-      // Format the To-Do list here, and return the output string as per the format given above.
-      // FILL YOUR CODE HERE
-      // ..
-      // ..
-      // ..
-      // return OUTPUT_STRING
-     // let print_format=`[${mark}] Submit assignment ${dat}`;
      let str=""
        for (let i of list){
         if (i.dueDate==today){
             if(i.completed==true){
-                str+=`[X] ${i.title}\n`
+                str+=`[X] ${i.title}`
             }
             else{
-                str+=`[ ] ${i.title}\n`
+                str+=`[ ] ${i.title}`
             }
         }
         else if(i.completed==true){
